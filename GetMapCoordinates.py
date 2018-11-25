@@ -42,7 +42,7 @@ class GetMapCoordinates(QgsMapToolEmitPoint):
         lat = pt4326.y()
         lon = pt4326.x()
         #change dockwidget corrdinate with the original crs
-        self.dockwidget.coordinateText.setText(str("%.4f" % pt.x())+' , '+str("%.4f" % pt.y()))
+        self.dockwidget.coordinateText.setText(str("%.4f" % pt4326.x())+' , '+str("%.4f" % pt4326.y()))
         #assign point in 4326 crs to attribute so it can be used in other classes.
         self.pt4326=pt4326
         
